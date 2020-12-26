@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--shader작성-->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+attribute vec4 vColor;
+attribute vec4 vPosition2;
+uniform vec4 vOffset;
+uniform vec4 vSize;
+uniform float theta;
+uniform bool rotation;
+varying vec4 fColor;
+void main()
+{
+
+    if(rotation == true){
+    gl_Position.x =  cos( theta ) * vPosition.x - sin( theta ) * vPosition.y; //xcos@ - ysin@
+    gl_Position.y =  sin( theta ) * vPosition.x + cos( theta ) * vPosition.y; //xsin@ + ycos@
+    gl_Position.z = 0.0;
+    gl_Position.w = 1.0;
+    }
+    else{
+    gl_Position = vPosition*vSize + vOffset;
+    }
+
+    fColor = vColor;
+}
+    </script>
+    <!--shader작성-->
+    <script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+uniform vec4 u_color;
+uniform bool rotation2;
+varying vec4 fColor;
+void main()
+{
+    if(rotation2 == true){
+    gl_FragColor = fColor + u_color;
+    }else{
+    gl_FragColor = u_color;
+    }
+}
+
+    </script>
+    <!--필요한 파일들 include 하는 느낌 (외부 라이브러리 사용)-->
+    <script type="text/javascript" src="../Common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../Common/initShaders.js"></script>
+    <script type="text/javascript" src="../Common/MV.js"></script>
+    <script type="text/javascript" src="assignment3.js"></script>
+</head>
+
+<body>
+
+<canvas id="gl-canvas" width="512" height="512">
+    Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<div>
+    <button id = "Button">Reverse</button>
+</div>
+</body>
+</html>

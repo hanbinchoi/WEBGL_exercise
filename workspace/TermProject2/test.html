@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Football Manager Test Script</title>
+    <style type="text/css">
+        #left{
+            width: 100%;
+            height: 700px;
+            background-color:aqua;
+            float:left;
+        }
+        #right{
+            width:520px;
+            height:540px;
+            background-color:red;
+            float:left;
+        }
+
+    </style>
+
+    <!--shader작성-->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+attribute vec4 vColor;
+varying vec4 fColor;
+uniform vec3 theta;
+void main()
+{
+    // Compute the sines and cosines of theta for each of
+    //   the three axes in one computation.
+    vec3 angles = radians( theta );
+    vec3 c = cos( angles );
+    vec3 s = sin( angles );
+
+    // Remeber: thse matrices are column-major
+    mat4 rx = mat4( 1.0,  0.0,  0.0, 0.0,
+          0.0,  c.x,  s.x, 0.0,
+          0.0, -s.x,  c.x, 0.0,
+          0.0,  0.0,  0.0, 1.0 );
+
+    mat4 ry = mat4(
+            c.y, 0.0, -s.y, 0.0,
+          0.0, 1.0,  0.0, 0.0,
+          s.y, 0.0,  c.y, 0.0,
+          0.0, 0.0,  0.0, 1.0 );
+
+
+    mat4 rz = mat4( c.z, -s.z, 0.0, 0.0,
+          s.z,  c.z, 0.0, 0.0,
+          0.0,  0.0, 1.0, 0.0,
+          0.0,  0.0, 0.0, 1.0 );
+
+    fColor = vColor;
+    gl_Position = rz * ry * rx * vPosition;
+}
+    </script>
+    <!--shader작성-->
+    <script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 fColor;
+void main()
+{
+    gl_FragColor = fColor;
+}
+
+    </script>
+    <!--필요한 파일들 include 하는 느낌 (외부 라이브러리 사용)-->
+    <script type="text/javascript" src="../Common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../Common/initShaders.js"></script>
+    <script type="text/javascript" src="../Common/MV.js"></script>
+    <script type="text/javascript" src="geometry.js"></script>
+    <!--test.js 로딩-->
+    <script type="text/javascript" src="test.js"></script>
+
+    <!-- Three js -->
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <!-- WebGL 지원유무 https://github.com/mrdoob/three.js/blob/master/examples/js/WebGL.js 참고 -->
+    <script src="./libs/WebGL.js"></script>
+    <!-- OrbitControls.js allow the camera to orbit around a target 마우스와 카메라를 상호작용하게 합니다. -->
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <!-- OBJ Loader를 사용하기 위해 추가. https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/OBJLoader.js 와 동일 소스  -->
+    <script src="./libs/OBJLoader.js"></script>
+    <!-- OBJ Loader에 Material을 씌우기 위한 라이브러리 추가. https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/MTLLoader.js 와 동일 소스 -->
+    <script src="./libs/MTLLoader.js"></script>
+
+
+
+
+</head>
+
+<body>
+<div id="left">
+    <canvas id="gl-canvas" width="800" height="700"></canvas>
+</div>
+<div id="right">
+    <table>
+        <tr>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+        </tr>
+        <tr>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+        </tr>
+        <tr>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+        </tr>
+        <tr>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+        </tr>
+        <tr>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+            <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <br/>
+
+    <button id= "xButton">Rotate X</button>
+    <button id= "yButton">Rotate Y</button>
+    <button id= "zButton">Rotate Z</button>
+    <button id = "ButtonT">Toggle Rotation</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+    <html>
+        <head>
+            <title>Football Manager Test Script</title>
+            <style type="text/css">
+                #left{
+                    width:720px;
+                    height:720px;
+                    float:left;
+                }
+                #right{
+                    width:520px;
+                    height:540px;
+                    background-color:rgb(255, 255, 255);
+                    float:left;
+                }
+            </style>
+        
+        <script id="vertex-shader" type="x-shader/x-vertex">
+        
+        attribute  vec4 vPosition;
+        attribute  vec4 vColor;
+        varying vec4 fColor;
+        
+        uniform vec4 trans;
+        uniform vec3 theta;
+        
+        void main() 
+        {
+            gl_Position = vPosition;
+            fColor = vColor;
+            
+        } 
+        </script>
+        
+        <script id="fragment-shader" type="x-shader/x-fragment">
+        
+        precision mediump float;
+        
+        varying vec4 fColor;
+        
+        void
+        main()
+        {
+            gl_FragColor = fColor;
+        }
+        </script>
+        </head>
+        
+
+    <script type="text/javascript" src="../Common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../Common/initShaders.js"></script>
+    <script type="text/javascript" src="../Common/MV.js"></script>
+    <script type="text/javascript" src="cube_ctm.js"></script>
+
+    <body>
+        <div id="left">
+            <canvas id="gl-canvas" width="720" height="720"></canvas>
+        </div>
+        <div id="right">
+            <table>
+                <tr>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png" onclick="ronaldo_click()"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="messi.png" onclick="messi_click()"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="messi.png" onclick="messi_click2()"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                </tr>
+                <tr>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                </tr>
+                <tr>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                </tr>
+                <tr>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                </tr>
+                <tr>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                    <td><input style="height:100px;width:100px" type="image" name="button" src="ronaldo.png"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+        </div>
+    </body>  
+    </html>

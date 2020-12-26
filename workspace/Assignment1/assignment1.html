@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script id="vertex-shader" type="x-shader/x-vertex">
+// 버텍스 쉐이더
+attribute vec4 vPosition;
+uniform vec4 vOffset;
+uniform vec4 vSize;
+void main()
+{
+    gl_Position = vPosition*vSize + vOffset;
+    //위치, 크기 조정
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+// 프래그먼트 쉐이더
+precision mediump float;
+uniform vec4 color;
+void
+main()
+{
+	gl_FragColor = color;
+	//컬러 설정
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="assignment1.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+</head>
+
+<body>
+<canvas id="gl-canvas" width="1024" height="1024">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>

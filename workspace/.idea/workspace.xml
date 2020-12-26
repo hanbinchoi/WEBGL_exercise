@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3a175eb-74e9-4f24-aab1-ec7602db9b65" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Pokemon-WebGL" />
+  </component>
+  <component name="ProjectId" id="1hIlahr88Rm3hVXXwEnu3bWtnPZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TeamProject5/image" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gksql\Desktop\3-2\graphics\workspace\TeamProject5\image" />
+      <recent name="C:\Users\gksql\Desktop\3-2\graphics\workspace\TeamProject5\resources\stardium" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gksql\Desktop\3-2\graphics\workspace\TeamProject5\resources\stardium" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3a175eb-74e9-4f24-aab1-ec7602db9b65" name="Default Changelist" comment="" />
+      <created>1599706552115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599706552115</updated>
+      <workItem from="1599706553190" duration="2711000" />
+      <workItem from="1600063705143" duration="3241000" />
+      <workItem from="1600309116477" duration="5064000" />
+      <workItem from="1600321117428" duration="100000" />
+      <workItem from="1600668203839" duration="5166000" />
+      <workItem from="1600912983989" duration="3270000" />
+      <workItem from="1600938984691" duration="12238000" />
+      <workItem from="1601021286391" duration="9718000" />
+      <workItem from="1601171389701" duration="2598000" />
+      <workItem from="1601273683854" duration="3322000" />
+      <workItem from="1601277564990" duration="334000" />
+      <workItem from="1601278351756" duration="126000" />
+      <workItem from="1601278808378" duration="59000" />
+      <workItem from="1606027852503" duration="31001000" />
+      <workItem from="1606115435574" duration="1306000" />
+      <workItem from="1606360871932" duration="1623000" />
+      <workItem from="1606551100933" duration="1981000" />
+      <workItem from="1606562413265" duration="911000" />
+      <workItem from="1606566881266" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="513" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606035389764">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="513" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606035389764" />
+    <state x="581" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606046317898">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="581" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606046317898" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1599707786796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599707786796" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601173827533">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601173827533" />
+  </component>
+</project>
